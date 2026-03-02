@@ -1,0 +1,47 @@
+# OS files
+.DS_Store
+
+# Media - Images
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.tiff
+*.tif
+*.ico
+*.webp
+*.svg
+*.heic
+*.heif
+*.raw
+*.cr2
+*.nef
+*.psd
+*.ai
+
+# Media - Video
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.wmv
+*.flv
+*.webm
+*.m4v
+*.mpg
+*.mpeg
+*.3gp
+
+# Media - Audio
+*.mp3
+*.wav
+*.aac
+*.flac
+*.ogg
+*.wma
+*.m4a
+
+# Media directories
+assets/
+videos/
