@@ -27,11 +27,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </div>
         </div>
         <div class="schedule-times">
-          <span>6 AM</span>
-          <span>10 AM</span>
-          <span>6 PM</span>
-          <span>10 PM</span>
-          <span>6 AM</span>
+          <span style="position: absolute; left: 0;">6 AM</span>
+          <span style="position: absolute; left: 16.67%;">10 AM</span>
+          <span style="position: absolute; left: 50%; transform: translateX(-50%);">6 PM</span>
+          <span style="position: absolute; left: 66.67%;">10 PM</span>
+          <span style="position: absolute; right: 0;">6 AM</span>
         </div>
       </div>
       <div class="schedule-summary">
@@ -432,12 +432,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   }
 
   .schedule-times {
-    display: flex;
-    justify-content: space-between;
+    position: relative;
+    height: 1.2rem;
     font-size: 0.7rem;
     color: var(--color-text-muted);
     margin-top: 0.35rem;
-    padding: 0 0.1rem;
   }
 
   .schedule-summary {
