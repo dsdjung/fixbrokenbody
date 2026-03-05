@@ -9,10 +9,42 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <p>My structured daily plan for recovery and building a stronger body.</p>
     </div>
 
+    <div class="schedule-overview card">
+      <h2>16:8 Intermittent Fasting Schedule</h2>
+      <div class="schedule-visual">
+        <div class="schedule-bar">
+          <div class="bar-fasting bar-fasting-morning" style="flex: 4;">
+            <span>Fasting</span>
+          </div>
+          <div class="bar-eating" style="flex: 8;">
+            <span>Eating Window</span>
+          </div>
+          <div class="bar-fasting bar-fasting-evening" style="flex: 4;">
+            <span>Fasting</span>
+          </div>
+          <div class="bar-sleep" style="flex: 8;">
+            <span>Sleep</span>
+          </div>
+        </div>
+        <div class="schedule-times">
+          <span>6 AM</span>
+          <span>10 AM</span>
+          <span>6 PM</span>
+          <span>10 PM</span>
+          <span>6 AM</span>
+        </div>
+      </div>
+      <div class="schedule-summary">
+        <p><strong>Eating window:</strong> 10:00 AM &ndash; 6:00 PM (8 hours)</p>
+        <p><strong>Fasting:</strong> 6:00 PM &ndash; 10:00 AM (16 hours)</p>
+        <p><strong>3 meals:</strong> 10 AM (break fast) &bull; 1 PM (lunch) &bull; 5:30 PM (last meal)</p>
+      </div>
+    </div>
+
     <div class="routine">
       <section class="time-block card">
-        <div class="time-badge">Morning</div>
-        <h2>Wake Up & Prep</h2>
+        <div class="time-badge">6:00 AM &mdash; Wake Up</div>
+        <h2>Fasted Morning Routine</h2>
         <ul class="checklist">
           <li><label><input type="checkbox" /> Wake up with 8 hours sleep</label></li>
           <li>
@@ -36,7 +68,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </li>
           <li><label><input type="checkbox" /> Drink cold water (300–500 mL)</label></li>
           <li><label><input type="checkbox" /> Splash cold water on face</label></li>
-          <li><label><input type="checkbox" /> Breakfast</label></li>
         </ul>
         <details class="why-section">
           <summary>Why I do this</summary>
@@ -46,13 +77,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <p>During deep sleep, the body releases human growth hormone (HGH) for tissue repair and muscle recovery. Even a single night of poor sleep reduces insulin sensitivity by 19–25%. Sleep is Step Zero — without it, nothing else works.</p>
             <p>Morning stretching lowers blood glucose by up to 28 mg/dL per session and reduces blood pressure — sometimes more effectively than walking. It also activates the parasympathetic nervous system, shifting the body from stress mode to recovery mode.</p>
             <p>Cold water first thing addresses overnight dehydration (improving alertness and mood immediately), activates the vagus nerve via the mammalian diving reflex (shifting the nervous system toward recovery), and provides a small metabolic boost. Splashing cold water on the face amplifies the vagal activation significantly more than drinking alone.</p>
+            <p>No food yet — this is still the fasting window. The fasted state keeps HGH elevated (up to 5-fold in males) for continued tissue repair and fat oxidation. Water, black coffee, and plain tea are fine during the fast.</p>
           </div>
         </details>
       </section>
 
       <section class="time-block card">
-        <div class="time-badge">Mid-Morning</div>
-        <h2>Movement & Exercise</h2>
+        <div class="time-badge">7:00 AM &mdash; Fasted Exercise</div>
+        <h2>Movement & Strength</h2>
         <ul class="checklist">
           <li>
             <label><input type="checkbox" /> Warm up (5 min)</label>
@@ -73,21 +105,24 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             </details>
           </li>
           <li>
-            <label><input type="checkbox" /> Exercise routine (30–45 min)</label>
+            <label><input type="checkbox" /> Walk (20–30 min, outdoors)</label>
+          </li>
+          <li>
+            <label><input type="checkbox" /> Strength routine (15–20 min)</label>
             <details class="item-detail">
               <summary>What to do</summary>
               <div class="item-detail-content">
                 <table>
                   <thead><tr><th>Exercise</th><th>Sets × Reps</th><th>Equipment</th><th>Notes</th></tr></thead>
                   <tbody>
-                    <tr><td>Walk (brisk)</td><td>20–30 min</td><td>None</td><td>Outdoors if possible for sunlight</td></tr>
                     <tr><td>Bodyweight squats (or to chair)</td><td>3 × 10</td><td>Chair for support</td><td>Go as low as comfortable</td></tr>
                     <tr><td>Wall push-ups</td><td>3 × 10</td><td>Wall</td><td>Progress to incline/floor over time</td></tr>
+                    <tr><td>Wall sit (isometric hold)</td><td>3 × 30 sec</td><td>Wall</td><td>Build to 2 min holds over weeks</td></tr>
                     <tr><td>Standing calf raises</td><td>3 × 15</td><td>Wall for balance</td><td>Slow up, slow down</td></tr>
                     <tr><td>Dead hang or arm raise</td><td>3 × 15–30 sec</td><td>Bar or doorframe</td><td>If no bar, raise arms overhead</td></tr>
                   </tbody>
                 </table>
-                <p class="detail-note">Adjust reps and sets to your current level. The goal is consistency, not intensity. Progress gradually week by week.</p>
+                <p class="detail-note">Adjust reps and sets to your current level. Progress by 10% per week. The goal is consistency, not intensity.</p>
               </div>
             </details>
           </li>
@@ -111,30 +146,96 @@ import BaseLayout from '../layouts/BaseLayout.astro';
               </div>
             </details>
           </li>
-          <li><label><input type="checkbox" /> Post-workout nutrition</label></li>
         </ul>
         <details class="why-section">
           <summary>Why I do this</summary>
           <div class="why-content">
+            <p>Exercising in a fasted state improves insulin sensitivity more than fed exercise. A 6-week trial found that muscles from the fasted exercise group were more responsive to insulin and showed greater increases in glucose transport proteins compared to those who ate before exercising.</p>
             <p>A body that stops moving starts dying. A fit older person can lose 25% of their strength in just 2 weeks of inactivity. After a decade of not moving, reversing this is the most important thing I can do.</p>
-            <p>Walking increases muscle glucose uptake up to fivefold through insulin-independent mechanisms. A 10-minute walk after eating significantly reduces blood sugar spikes. The glucose-lowering effect of exercise continues for up to 48 hours — which is why never skipping more than 1 day matters.</p>
-            <p>Even 10 minutes of daily walking reduces mortality risk. The long-term goal is 60–75 minutes of moderate activity daily — the threshold that eliminates the excess mortality risk from sedentary behavior. Getting sunlight during the walk also sets the circadian clock for better sleep.</p>
+            <p>Walking increases muscle glucose uptake up to fivefold through insulin-independent mechanisms. The glucose-lowering effect of exercise continues for up to 48 hours — which is why never skipping more than 1 day matters. The outdoor walk also gets sunlight, setting the circadian clock for better sleep.</p>
+            <p>Wall sits are the single most effective exercise for blood pressure reduction — a meta-analysis of 270 RCTs found isometric exercise lowers systolic BP by 8.24 mmHg, more than any other exercise type and comparable to medication.</p>
+            <p>Dead hangs build grip strength (a stronger mortality predictor than blood pressure in 3M+ participants), decompress the spine after years of sitting, and restore shoulder mobility.</p>
             <p>The cool-down stretch after exercise isn't just for flexibility — stretching reduces post-exercise blood pressure by ~10 mmHg, improves arterial health, and stimulates nitric oxide release which dilates blood vessels and reduces inflammation.</p>
           </div>
         </details>
       </section>
 
       <section class="time-block card">
-        <div class="time-badge">Afternoon</div>
-        <h2>Recovery & Nutrition</h2>
+        <div class="time-badge">10:00 AM &mdash; Meal 1</div>
+        <h2>Break Fast</h2>
         <ul class="checklist">
-          <li><label><input type="checkbox" /> Healthy lunch</label></li>
           <li>
-            <label><input type="checkbox" /> Walk / light movement (15–20 min)</label>
+            <label><input type="checkbox" /> Protein-rich first meal (20–35 g protein)</label>
+            <details class="item-detail">
+              <summary>What to eat</summary>
+              <div class="item-detail-content">
+                <p><strong>Prioritize protein first</strong> — this blunts the glucose spike compared to starting with carbs. Aim for 20–35 g protein to maximize muscle protein synthesis.</p>
+                <table>
+                  <thead><tr><th>Food</th><th>Protein</th><th>Notes</th></tr></thead>
+                  <tbody>
+                    <tr><td>Eggs (3 whole)</td><td>~18 g</td><td>Scrambled, boiled, or omelette</td></tr>
+                    <tr><td>Greek yogurt (200 g)</td><td>~20 g</td><td>Add nuts and berries</td></tr>
+                    <tr><td>Chicken breast (120 g)</td><td>~30 g</td><td>With vegetables and olive oil</td></tr>
+                    <tr><td>Lentils / chickpeas (1 cup cooked)</td><td>~18 g</td><td>Good plant-based option</td></tr>
+                    <tr><td>Salmon (120 g)</td><td>~25 g</td><td>Omega-3 bonus for inflammation</td></tr>
+                  </tbody>
+                </table>
+                <p class="detail-note">Add colorful vegetables (leafy greens, peppers, tomatoes) and healthy fats (olive oil, avocado, nuts). Avoid sugary cereals, pastries, and juice.</p>
+              </div>
+            </details>
+          </li>
+          <li>
+            <label><input type="checkbox" /> Post-meal walk (10 min)</label>
             <details class="item-detail">
               <summary>What to do</summary>
               <div class="item-detail-content">
-                <p>Post-lunch walk at a comfortable pace. Aim for 15–20 minutes. This is specifically for glucose management — walking after meals reduces blood sugar spikes significantly.</p>
+                <p>Walk at a comfortable pace for 10 minutes starting within 30 minutes of finishing the meal. This is specifically for blunting the postprandial glucose spike.</p>
+                <p class="detail-note">Even pacing around the house counts. The goal is movement, not intensity.</p>
+              </div>
+            </details>
+          </li>
+          <li><label><input type="checkbox" /> Hydration check</label></li>
+        </ul>
+        <details class="why-section">
+          <summary>Why I do this</summary>
+          <div class="why-content">
+            <p>This is the first meal after a 16-hour fast. The eating window runs from 10 AM to 6 PM (8 hours). Breaking the fast with protein is critical — inactive adults need 1.2–1.6 g/kg body weight per day to overcome anabolic resistance and rebuild muscle. An energy deficit of just 20% reduces muscle synthesis by 19%.</p>
+            <p>After years of inactivity, the body develops "anabolic resistance" — it requires almost twice as much protein per meal to stimulate muscle building compared to active adults. This is why every meal in the eating window must be protein-rich.</p>
+            <p>A 10-minute post-meal walk significantly lowers the 2-hour glucose area under the curve, mean blood glucose, and peak glucose. This is one of the single most effective interventions for glucose control — it costs nothing and works immediately.</p>
+            <p>The fasted exercise before this meal amplifies the benefit: muscles that were exercised fasted show greater increases in insulin sensitivity and glucose transporter proteins.</p>
+          </div>
+        </details>
+      </section>
+
+      <section class="time-block card">
+        <div class="time-badge">1:00 PM &mdash; Meal 2</div>
+        <h2>Lunch & Recovery</h2>
+        <ul class="checklist">
+          <li>
+            <label><input type="checkbox" /> Protein-rich lunch (20–35 g protein)</label>
+            <details class="item-detail">
+              <summary>What to eat</summary>
+              <div class="item-detail-content">
+                <p><strong>Mediterranean-pattern meal:</strong> protein + vegetables + healthy fats + complex carbs.</p>
+                <table>
+                  <thead><tr><th>Component</th><th>Examples</th><th>Why</th></tr></thead>
+                  <tbody>
+                    <tr><td>Protein (20–35 g)</td><td>Fish, chicken, eggs, legumes, tofu</td><td>Muscle rebuilding, satiety</td></tr>
+                    <tr><td>Vegetables (half the plate)</td><td>Leafy greens, broccoli, peppers, tomatoes</td><td>Anti-inflammatory phytonutrients</td></tr>
+                    <tr><td>Healthy fat</td><td>Olive oil, avocado, nuts, seeds</td><td>Reduces inflammation, improves absorption</td></tr>
+                    <tr><td>Complex carbs</td><td>Sweet potato, brown rice, whole grain bread, quinoa</td><td>Sustained energy, fiber for gut health</td></tr>
+                  </tbody>
+                </table>
+                <p class="detail-note">Minimize: white bread, white rice, fried food, sugary drinks. The Mediterranean diet pattern reduces CRP by 20% and IL-6 by 17%.</p>
+              </div>
+            </details>
+          </li>
+          <li>
+            <label><input type="checkbox" /> Post-lunch walk (15–20 min)</label>
+            <details class="item-detail">
+              <summary>What to do</summary>
+              <div class="item-detail-content">
+                <p>Post-lunch walk at a comfortable pace. Aim for 15–20 minutes. This is specifically for glucose management — 30 minutes of post-meal walking improves glycemic response regardless of what you ate.</p>
                 <p class="detail-note">Equipment: None. Outdoors preferred. Even pacing around the house counts.</p>
               </div>
             </details>
@@ -170,10 +271,23 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </section>
 
       <section class="time-block card">
-        <div class="time-badge">Evening</div>
-        <h2>Wind Down</h2>
+        <div class="time-badge">5:30 PM &mdash; Meal 3</div>
+        <h2>Last Meal & Wind Down</h2>
         <ul class="checklist">
-          <li><label><input type="checkbox" /> Healthy dinner</label></li>
+          <li>
+            <label><input type="checkbox" /> Protein-rich dinner (20–35 g protein)</label>
+            <details class="item-detail">
+              <summary>What to eat</summary>
+              <div class="item-detail-content">
+                <p><strong>Last meal of the day.</strong> Same principles: protein + vegetables + healthy fats. This meal closes the eating window.</p>
+                <p>Good options: grilled fish or chicken with roasted vegetables and olive oil, a hearty lentil soup with whole grain bread, or a large salad with protein and avocado.</p>
+                <p class="detail-note">Finish eating by 6:00 PM. This ensures 4+ hours between your last meal and sleep (10 PM), and starts the 16-hour fast. No snacking after this meal.</p>
+              </div>
+            </details>
+          </li>
+          <li>
+            <label><input type="checkbox" /> Post-dinner walk (10 min)</label>
+          </li>
           <li>
             <label><input type="checkbox" /> Evening stretch / yoga (10–15 min)</label>
             <details class="item-detail">
@@ -199,6 +313,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <details class="why-section">
           <summary>Why I do this</summary>
           <div class="why-content">
+            <p>Eating the last meal by 6 PM creates a 16-hour fast until 10 AM the next morning. Research shows early eating windows (aligned with circadian rhythm) produce better insulin sensitivity, blood pressure, and glucose metabolism than late eating windows. Late-night eating impairs insulin sensitivity and fragments sleep.</p>
+            <p>The post-dinner walk blunts the final glucose spike of the day, ensuring blood sugar is well-managed before the overnight fast begins.</p>
             <p>Evening stretching activates the parasympathetic nervous system — the "rest and digest" mode. Studies show that stretching significantly decreases salivary cortisol and enhances parasympathetic nerve activity as measured by heart rate variability. This directly prepares the body for quality sleep.</p>
             <p>Stretching in supine and inverted positions (like legs up the wall) stimulates baroreceptor activity, which reflexively lowers blood pressure, reduces stress hormones, and calms brain activity. This is as much for the nervous system as for flexibility.</p>
             <p>12 weeks of regular stretching improves vascular function, reduces arterial stiffness, and induces positive arterial remodelling — benefits that persist even after stopping. The evening session compounds with the morning stretches for cumulative vascular and metabolic benefit.</p>
@@ -208,11 +324,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </section>
 
       <section class="time-block card">
-        <div class="time-badge">Night</div>
-        <h2>Sleep</h2>
+        <div class="time-badge">9:30 PM &mdash; Sleep</div>
+        <h2>Lights Out by 10 PM</h2>
         <ul class="checklist">
           <li><label><input type="checkbox" /> No screens 30 min before bed</label></li>
-          <li><label><input type="checkbox" /> Lights out at least 4 hours after a meal</label></li>
+          <li><label><input type="checkbox" /> Lights out by 10 PM (8 hours before wake)</label></li>
         </ul>
         <details class="why-section">
           <summary>Why I do this</summary>
@@ -220,7 +336,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <p>Sleep is Step Zero. During deep sleep, the body releases human growth hormone for tissue repair, the brain's glymphatic system clears metabolic waste, and the immune system produces cytokines for infection defense and tissue healing. Without sleep, none of this happens.</p>
             <p>Sleep deprivation directly causes insulin resistance — even one night of poor sleep reduces insulin sensitivity by 19–25%. One week of sleeping ~5 hours/night significantly reduces insulin sensitivity in healthy people. The good news: three nights of catch-up sleep can reduce insulin resistance by ~20%.</p>
             <p>Screens before bed suppress melatonin production. A wind-down routine with dim lights signals the body to prepare for sleep. The American Heart Association now recognizes sleep as one of their "Life's Essential 8" for cardiovascular health.</p>
-            <p>Eating at least 4 hours before sleep ensures the body isn't still digesting, which can fragment sleep architecture and raise overnight blood glucose.</p>
+            <p>The last meal was at 5:30–6:00 PM — over 4 hours ago. The body is done digesting, blood glucose has settled, and the overnight fast has begun. During sleep, HGH will surge for tissue repair, and the 16-hour fasting window will continue to promote autophagy (cellular cleanup) and fat oxidation until the eating window reopens at 10 AM.</p>
           </div>
         </details>
       </section>
@@ -268,6 +384,73 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 </script>
 
 <style>
+  /* Schedule overview */
+  .schedule-overview {
+    max-width: 700px;
+    margin: 0 auto 1.5rem;
+  }
+
+  .schedule-overview h2 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .schedule-visual {
+    margin-bottom: 1rem;
+  }
+
+  .schedule-bar {
+    display: flex;
+    height: 36px;
+    border-radius: 8px;
+    overflow: hidden;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .schedule-bar > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+  }
+
+  .bar-fasting {
+    background: var(--color-bg-alt);
+    color: var(--color-text-muted) !important;
+  }
+
+  .bar-eating {
+    background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+  }
+
+  .bar-sleep {
+    background: #2c3e50;
+  }
+
+  .schedule-times {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.7rem;
+    color: var(--color-text-muted);
+    margin-top: 0.35rem;
+    padding: 0 0.1rem;
+  }
+
+  .schedule-summary {
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+  }
+
+  .schedule-summary p {
+    margin: 0.15rem 0;
+  }
+
   .routine {
     max-width: 700px;
     margin: 0 auto;
@@ -287,12 +470,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     left: 1.5rem;
     background: var(--color-primary);
     color: white;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     font-weight: 600;
     padding: 0.25rem 0.75rem;
     border-radius: 20px;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.03em;
+    white-space: nowrap;
   }
 
   .time-block h2 {

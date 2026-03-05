@@ -17,11 +17,12 @@ const { Content } = await render(entry);
 const routine = entry.data.routine;
 const blocks = routine
   ? [
-      { key: 'morning', label: 'Morning', icon: '🌅', data: routine.morning },
-      { key: 'exercise', label: 'Exercise', icon: '💪', data: routine.exercise },
-      { key: 'afternoon', label: 'Afternoon', icon: '☀️', data: routine.afternoon },
-      { key: 'evening', label: 'Evening', icon: '🌙', data: routine.evening },
-      { key: 'sleep', label: 'Sleep', icon: '😴', data: routine.sleep },
+      { key: 'morning', label: '6 AM', icon: '🌅', data: routine.morning },
+      { key: 'exercise', label: '7 AM', icon: '💪', data: routine.exercise },
+      { key: 'meal1', label: '10 AM', icon: '🍳', data: routine.meal1 },
+      { key: 'meal2', label: '1 PM', icon: '🥗', data: routine.meal2 },
+      { key: 'meal3', label: '5:30', icon: '🍽️', data: routine.meal3 },
+      { key: 'sleep', label: '10 PM', icon: '😴', data: routine.sleep },
     ]
   : null;
 
@@ -178,7 +179,7 @@ const total = blocks ? blocks.length : 0;
 
   .scorecard-blocks {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     gap: 0.5rem;
   }
 
@@ -234,7 +235,7 @@ const total = blocks ? blocks.length : 0;
 
   @media (max-width: 768px) {
     .scorecard-blocks {
-      grid-template-columns: repeat(5, 1fr);
+      grid-template-columns: repeat(6, 1fr);
       gap: 0.35rem;
     }
 

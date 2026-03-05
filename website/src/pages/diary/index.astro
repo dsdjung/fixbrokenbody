@@ -9,7 +9,7 @@ const entries = (await getCollection('diary')).sort(
 
 function getScore(routine: any) {
   if (!routine) return null;
-  const blocks = [routine.morning, routine.exercise, routine.afternoon, routine.evening, routine.sleep];
+  const blocks = [routine.morning, routine.exercise, routine.meal1, routine.meal2, routine.meal3, routine.sleep];
   const total = blocks.length;
   const done = blocks.filter((b: any) => b?.done).length;
   return { done, total };

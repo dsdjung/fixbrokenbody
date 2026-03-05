@@ -17,8 +17,9 @@ const diary = defineCollection({
       .object({
         morning: routineBlock.optional(),
         exercise: routineBlock.optional(),
-        afternoon: routineBlock.optional(),
-        evening: routineBlock.optional(),
+        meal1: routineBlock.optional(),
+        meal2: routineBlock.optional(),
+        meal3: routineBlock.optional(),
         sleep: routineBlock.optional(),
       })
       .optional(),
