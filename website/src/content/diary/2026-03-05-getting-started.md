@@ -12,10 +12,10 @@ routine:
     note: "Not ready yet — starting tomorrow"
   meal1:
     done: true
-    note: "Eggs and vegetables at 10 AM"
+    note: "Korean soup with rice at 11 AM"
   meal2:
     done: true
-    note: "Lunch with post-meal walk"
+    note: "No lunch"
   meal3:
     done: true
     note: "Dinner by 6 PM"
@@ -24,16 +24,6 @@ routine:
     note: "Lights out by 10 PM"
 ---
 
-This is the first entry in my diary. Replace this with your actual first entry.
-
-## What happened today
-
-Write about what you did, how you felt, and what you learned.
-
-## How I'm feeling
-
-Describe your physical and mental state.
-
-## Next steps
-
-What you plan to do next.
+First day.
+Started with some stretching. I think they call it the frog style stretch, working on your pelvis. 
+Walked after lunch. But strange thing was that my lungs were burning when I was just walking. Around 20 minute walk. Not sure what happened. Passed out for 3 hours after the walk. I walked double the distance just couple of days ago without too much issue. Is it the new stretch? Not sure
