@@ -1,0 +1,158 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Media">
+  <div class="container">
+    <div class="page-header">
+      <h1>Media</h1>
+      <p>Videos and photos documenting my journey.</p>
+    </div>
+
+    <section class="media-section">
+      <h2>Videos</h2>
+      <p class="section-hint">Add your YouTube video embeds below. Replace the sample with your actual video URLs.</p>
+      <div class="video-grid">
+        <!--
+          To add a YouTube video, copy this block and replace the VIDEO_ID:
+          <div class="video-card card">
+            <div class="video-embed">
+              <iframe
+                src="https://www.youtube.com/embed/VIDEO_ID"
+                title="Video title"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <h3>Video Title</h3>
+            <p>Brief description of the video.</p>
+          </div>
+        -->
+        <div class="video-card card">
+          <div class="video-embed video-placeholder">
+            <p>Your first video here</p>
+          </div>
+          <h3>Sample Video</h3>
+          <p>Replace this with your YouTube embed. See the HTML comments for the template.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="media-section">
+      <h2>Instagram</h2>
+      <p class="section-hint">Link to your Instagram posts or embed them below.</p>
+      <div class="instagram-grid">
+        <!--
+          To add an Instagram post link:
+          <a href="https://www.instagram.com/p/POST_ID/" target="_blank" rel="noopener" class="card instagram-card">
+            <h3>Post Title</h3>
+            <p>Brief description</p>
+            <span class="link-arrow">View on Instagram &rarr;</span>
+          </a>
+        -->
+        <a href="#" class="card instagram-card">
+          <h3>Sample Post</h3>
+          <p>Replace this with links to your Instagram posts.</p>
+          <span class="link-arrow">View on Instagram &rarr;</span>
+        </a>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .media-section {
+    max-width: 900px;
+    margin: 0 auto 3rem;
+  }
+
+  .media-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .section-hint {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .video-card h3 {
+    margin: 1rem 0 0.25rem;
+    font-size: 1.1rem;
+  }
+
+  .video-card p {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+  }
+
+  .video-embed {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    background: var(--color-bg-alt);
+  }
+
+  .video-embed iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .video-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .video-placeholder p {
+    position: absolute;
+    color: var(--color-text-muted);
+    font-size: 1rem;
+  }
+
+  .instagram-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .instagram-card {
+    display: block;
+    color: var(--color-text);
+    text-decoration: none;
+  }
+
+  .instagram-card:hover {
+    color: var(--color-text);
+  }
+
+  .instagram-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .instagram-card p {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .link-arrow {
+    color: var(--color-primary);
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+</style>

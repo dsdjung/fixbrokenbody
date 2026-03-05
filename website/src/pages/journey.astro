@@ -1,0 +1,70 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="My Journey">
+  <div class="container">
+    <div class="page-header">
+      <h1>My Journey</h1>
+      <p>Why I started, where I am now, and where I'm going.</p>
+    </div>
+
+    <div class="journey-content prose">
+      <section class="journey-section">
+        <h2>Why I Started</h2>
+        <p>
+          <!-- Replace this with your story -->
+          Write about what motivated you to start fixing your body. What was the
+          breaking point? What did you realize needed to change?
+        </p>
+      </section>
+
+      <section class="journey-section">
+        <h2>Where I Am Now</h2>
+        <p>
+          <!-- Replace this with your current status -->
+          Write about your current state — what you've accomplished so far,
+          what's improving, and what you're currently working on.
+        </p>
+      </section>
+
+      <section class="journey-section">
+        <h2>My Goals</h2>
+        <ul>
+          <li>Goal 1 — describe your first goal</li>
+          <li>Goal 2 — describe your second goal</li>
+          <li>Goal 3 — describe your third goal</li>
+        </ul>
+      </section>
+
+      <section class="journey-section">
+        <h2>My Approach</h2>
+        <p>
+          <!-- Replace this with your approach -->
+          Write about the methods, treatments, exercises, or lifestyle changes
+          you're pursuing.
+        </p>
+      </section>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .journey-content {
+    max-width: 750px;
+    margin: 0 auto;
+  }
+
+  .journey-section {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow);
+  }
+
+  .journey-section h2 {
+    margin-top: 0;
+  }
+</style>
