@@ -16,6 +16,7 @@ const facts = defineCollection({
   schema: z.object({
     title: z.string(),
     order: z.number().optional(),
+    summary: z.string().optional(),
   }),
 });
 

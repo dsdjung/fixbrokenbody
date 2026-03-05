@@ -1,6 +1,7 @@
 ---
 title: "Movement Is Life: Why the Body That Stops Moving Starts Dying"
 order: 3
+summary: "A fit older person can lose 25% of their strength in just 2 weeks of inactivity. Movement controls glucose, rebuilds the heart, grows new brain cells, and is the difference between recovery and decline."
 ---
 
 I knew an old man in his 90s who was remarkably healthy — going to the gym regularly, living independently. Then a single fall left him unable to move for a few weeks. He never recovered and passed away shortly after. This story isn't unusual. It's one of the most well-documented patterns in medicine, and it reveals a fundamental truth: **the human body is designed to move, and when it stops, it rapidly deteriorates**.

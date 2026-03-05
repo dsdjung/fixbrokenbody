@@ -1,6 +1,7 @@
 ---
 title: "Stretching: The Surprising Science Behind a Simple Act"
 order: 2
+summary: "Stretching lowers blood glucose by 28 mg/dL in a single session, reduces blood pressure more effectively than walking, improves arterial health, and calms the stress response — all with zero equipment or fitness required."
 ---
 
 Stretching sounds basic — almost too simple to matter. But the research tells a different story. For someone rebuilding a broken body, stretching is one of the most accessible and surprisingly powerful interventions available. It lowers blood glucose, reduces blood pressure, improves circulation, calms the stress response, and restores mobility — all without requiring fitness, equipment, or intensity.

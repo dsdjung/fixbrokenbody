@@ -1,6 +1,7 @@
 ---
 title: "Sleep: Step Zero — The Foundation of Fixing a Broken Body"
 order: 1
+summary: "Sleep is not optional — it is the foundation. Without it, your body cannot repair muscles, regulate glucose, protect your heart, or fight inflammation. Fix sleep first; everything else builds on top of it."
 ---
 
 If you're trying to fix a broken body, sleep is not just important — it is **Step Zero**. Before exercise, before nutrition, before any other intervention, sleep must be in place. Without it, your body literally cannot repair itself. Here's what the science says.
