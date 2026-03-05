@@ -15,14 +15,32 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <h2>Wake Up & Prep</h2>
         <ul class="checklist">
           <li><label><input type="checkbox" /> Wake up with 9 hours sleep</label></li>
-          <li><label><input type="checkbox" /> 5 min stretching in bed</label></li>
+          <li>
+            <label><input type="checkbox" /> 5 min stretching in bed</label>
+            <details class="item-detail">
+              <summary>What to do</summary>
+              <div class="item-detail-content">
+                <table>
+                  <thead><tr><th>Stretch</th><th>Duration</th><th>Notes</th></tr></thead>
+                  <tbody>
+                    <tr><td>Full body stretch (arms overhead, toes pointed)</td><td>30 sec</td><td>Reach as far as you can</td></tr>
+                    <tr><td>Knees to chest</td><td>30 sec</td><td>Hug both knees, gentle rock side to side</td></tr>
+                    <tr><td>Supine spinal twist (each side)</td><td>30 sec × 2</td><td>Keep shoulders flat on bed</td></tr>
+                    <tr><td>Hamstring stretch (each leg)</td><td>30 sec × 2</td><td>Use towel or hands behind thigh</td></tr>
+                    <tr><td>Hip flexor stretch (each side)</td><td>30 sec × 2</td><td>Bring knee to chest, extend other leg</td></tr>
+                  </tbody>
+                </table>
+                <p class="detail-note">Equipment: None — bed only. Keep it gentle. The goal is to wake up the body, not push hard.</p>
+              </div>
+            </details>
+          </li>
           <li><label><input type="checkbox" /> Drink a glass of water</label></li>
           <li><label><input type="checkbox" /> Breakfast</label></li>
         </ul>
         <details class="why-section">
           <summary>Why I do this</summary>
           <div class="why-content">
-            <p>Sleep is the main way body fixes itself. So, ensure 9 hours of sleep. 
+            <p>Sleep is the main way body fixes itself. So, ensure 9 hours of sleep.
             With the body in a bad shape, stretching in bed helps with starting the day off with movements with no excuse and it hurts way less compared to stretching on the ground.</p>
           </div>
         </details>
@@ -32,9 +50,63 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <div class="time-badge">Mid-Morning</div>
         <h2>Movement & Exercise</h2>
         <ul class="checklist">
-          <li><label><input type="checkbox" /> Warm up (5 min)</label></li>
-          <li><label><input type="checkbox" /> Exercise routine (30–45 min)</label></li>
-          <li><label><input type="checkbox" /> Cool down & stretch (10 min)</label></li>
+          <li>
+            <label><input type="checkbox" /> Warm up (5 min)</label>
+            <details class="item-detail">
+              <summary>What to do</summary>
+              <div class="item-detail-content">
+                <table>
+                  <thead><tr><th>Exercise</th><th>Duration / Reps</th><th>Notes</th></tr></thead>
+                  <tbody>
+                    <tr><td>March in place</td><td>1 min</td><td>Lift knees to comfortable height</td></tr>
+                    <tr><td>Arm circles</td><td>30 sec forward, 30 sec back</td><td>Small to large circles</td></tr>
+                    <tr><td>Leg swings (each leg)</td><td>30 sec × 2</td><td>Hold wall for balance</td></tr>
+                    <tr><td>Gentle torso twists</td><td>1 min</td><td>Arms relaxed, rotate side to side</td></tr>
+                  </tbody>
+                </table>
+                <p class="detail-note">Equipment: None. Goal is to get blood flowing and joints moving before exercise.</p>
+              </div>
+            </details>
+          </li>
+          <li>
+            <label><input type="checkbox" /> Exercise routine (30–45 min)</label>
+            <details class="item-detail">
+              <summary>What to do</summary>
+              <div class="item-detail-content">
+                <table>
+                  <thead><tr><th>Exercise</th><th>Sets × Reps</th><th>Equipment</th><th>Notes</th></tr></thead>
+                  <tbody>
+                    <tr><td>Walk (brisk)</td><td>20–30 min</td><td>None</td><td>Outdoors if possible for sunlight</td></tr>
+                    <tr><td>Bodyweight squats (or to chair)</td><td>3 × 10</td><td>Chair for support</td><td>Go as low as comfortable</td></tr>
+                    <tr><td>Wall push-ups</td><td>3 × 10</td><td>Wall</td><td>Progress to incline/floor over time</td></tr>
+                    <tr><td>Standing calf raises</td><td>3 × 15</td><td>Wall for balance</td><td>Slow up, slow down</td></tr>
+                    <tr><td>Dead hang or arm raise</td><td>3 × 15–30 sec</td><td>Bar or doorframe</td><td>If no bar, raise arms overhead</td></tr>
+                  </tbody>
+                </table>
+                <p class="detail-note">Adjust reps and sets to your current level. The goal is consistency, not intensity. Progress gradually week by week.</p>
+              </div>
+            </details>
+          </li>
+          <li>
+            <label><input type="checkbox" /> Cool down & stretch (10 min)</label>
+            <details class="item-detail">
+              <summary>What to do</summary>
+              <div class="item-detail-content">
+                <table>
+                  <thead><tr><th>Stretch</th><th>Duration</th><th>Notes</th></tr></thead>
+                  <tbody>
+                    <tr><td>Standing quad stretch (each leg)</td><td>30 sec × 2</td><td>Hold wall for balance</td></tr>
+                    <tr><td>Standing hamstring stretch (each leg)</td><td>30 sec × 2</td><td>Foot on low step or curb</td></tr>
+                    <tr><td>Calf stretch against wall (each leg)</td><td>30 sec × 2</td><td>Keep heel on ground</td></tr>
+                    <tr><td>Chest opener (doorway stretch)</td><td>30 sec</td><td>Arms on doorframe, lean through</td></tr>
+                    <tr><td>Neck rolls</td><td>30 sec each direction</td><td>Slow and gentle</td></tr>
+                    <tr><td>Child's pose or forward fold</td><td>1 min</td><td>Relax and breathe deeply</td></tr>
+                  </tbody>
+                </table>
+                <p class="detail-note">Equipment: None. Hold each stretch gently — no bouncing. Breathe slowly through each one.</p>
+              </div>
+            </details>
+          </li>
           <li><label><input type="checkbox" /> Post-workout nutrition</label></li>
         </ul>
         <details class="why-section">
@@ -50,8 +122,34 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <h2>Recovery & Nutrition</h2>
         <ul class="checklist">
           <li><label><input type="checkbox" /> Healthy lunch</label></li>
-          <li><label><input type="checkbox" /> Walk / light movement (15–20 min)</label></li>
-          <li><label><input type="checkbox" /> Foam rolling or massage</label></li>
+          <li>
+            <label><input type="checkbox" /> Walk / light movement (15–20 min)</label>
+            <details class="item-detail">
+              <summary>What to do</summary>
+              <div class="item-detail-content">
+                <p>Post-lunch walk at a comfortable pace. Aim for 15–20 minutes. This is specifically for glucose management — walking after meals reduces blood sugar spikes significantly.</p>
+                <p class="detail-note">Equipment: None. Outdoors preferred. Even pacing around the house counts.</p>
+              </div>
+            </details>
+          </li>
+          <li>
+            <label><input type="checkbox" /> Foam rolling or massage</label>
+            <details class="item-detail">
+              <summary>What to do</summary>
+              <div class="item-detail-content">
+                <table>
+                  <thead><tr><th>Area</th><th>Duration</th><th>Notes</th></tr></thead>
+                  <tbody>
+                    <tr><td>Calves</td><td>1 min each</td><td>Roll slowly, pause on tender spots</td></tr>
+                    <tr><td>Quads / IT band</td><td>1 min each side</td><td>Use body weight to control pressure</td></tr>
+                    <tr><td>Upper back</td><td>2 min</td><td>Arms crossed over chest</td></tr>
+                    <tr><td>Glutes</td><td>1 min each side</td><td>Sit on roller, cross ankle over knee</td></tr>
+                  </tbody>
+                </table>
+                <p class="detail-note">Equipment: Foam roller (or tennis ball for targeted spots). Skip areas that feel too painful — work up to them.</p>
+              </div>
+            </details>
+          </li>
           <li><label><input type="checkbox" /> Hydration check</label></li>
         </ul>
         <details class="why-section">
@@ -67,7 +165,25 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <h2>Wind Down</h2>
         <ul class="checklist">
           <li><label><input type="checkbox" /> Healthy dinner</label></li>
-          <li><label><input type="checkbox" /> Evening stretch / yoga (10–15 min)</label></li>
+          <li>
+            <label><input type="checkbox" /> Evening stretch / yoga (10–15 min)</label>
+            <details class="item-detail">
+              <summary>What to do</summary>
+              <div class="item-detail-content">
+                <table>
+                  <thead><tr><th>Stretch</th><th>Duration</th><th>Notes</th></tr></thead>
+                  <tbody>
+                    <tr><td>Cat-cow (on hands and knees)</td><td>1 min</td><td>Sync with breathing</td></tr>
+                    <tr><td>Seated forward fold</td><td>1 min</td><td>Reach for toes, bend knees if needed</td></tr>
+                    <tr><td>Pigeon pose (each side)</td><td>1 min × 2</td><td>Use pillow under hip if needed</td></tr>
+                    <tr><td>Supine figure-4 stretch (each side)</td><td>1 min × 2</td><td>Great for hip tightness</td></tr>
+                    <tr><td>Legs up the wall</td><td>3–5 min</td><td>Activates parasympathetic system</td></tr>
+                  </tbody>
+                </table>
+                <p class="detail-note">Equipment: Yoga mat or carpet. Pillow optional. Focus on deep, slow breathing — this is as much for the nervous system as for flexibility.</p>
+              </div>
+            </details>
+          </li>
           <li><label><input type="checkbox" /> Journal / diary entry</label></li>
           <li><label><input type="checkbox" /> Prepare for tomorrow</label></li>
         </ul>
@@ -208,6 +324,90 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     text-decoration: line-through;
   }
 
+  /* Item detail expandable sections */
+  .item-detail {
+    margin: 0.4rem 0 0.25rem 2.75rem;
+  }
+
+  .item-detail summary {
+    cursor: pointer;
+    font-size: 0.825rem;
+    font-weight: 600;
+    color: var(--color-accent);
+    padding: 0.15rem 0;
+    user-select: none;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .item-detail summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .item-detail summary::before {
+    content: '▸';
+    display: inline-block;
+    transition: transform 0.2s;
+    font-size: 0.7rem;
+  }
+
+  .item-detail[open] summary::before {
+    transform: rotate(90deg);
+  }
+
+  .item-detail summary:hover {
+    color: var(--color-primary);
+  }
+
+  .item-detail-content {
+    padding: 0.5rem 0 0.25rem;
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    line-height: 1.5;
+  }
+
+  .item-detail-content table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .item-detail-content th {
+    text-align: left;
+    font-weight: 600;
+    color: var(--color-text);
+    padding: 0.4rem 0.5rem;
+    border-bottom: 2px solid var(--color-border);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+
+  .item-detail-content td {
+    padding: 0.35rem 0.5rem;
+    border-bottom: 1px solid var(--color-bg-alt);
+    vertical-align: top;
+  }
+
+  .item-detail-content tr:last-child td {
+    border-bottom: none;
+  }
+
+  .detail-note {
+    font-size: 0.825rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+    margin: 0.5rem 0 0;
+  }
+
+  .item-detail-content p {
+    margin: 0 0 0.4rem;
+  }
+
+  /* Why section */
   .why-section {
     margin-top: 1rem;
     border-top: 1px solid var(--color-border);
@@ -282,5 +482,20 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   .btn-reset:hover {
     border-color: var(--color-primary);
     color: var(--color-primary);
+  }
+
+  @media (max-width: 768px) {
+    .item-detail {
+      margin-left: 2rem;
+    }
+
+    .item-detail-content table {
+      font-size: 0.8rem;
+    }
+
+    .item-detail-content th,
+    .item-detail-content td {
+      padding: 0.3rem 0.35rem;
+    }
   }
 </style>
