@@ -6,6 +6,14 @@ const base = import.meta.env.BASE_URL;
 const entries = (await getCollection('diary')).sort(
   (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
 );
+
+function getScore(routine: any) {
+  if (!routine) return null;
+  const blocks = [routine.morning, routine.exercise, routine.afternoon, routine.evening, routine.sleep];
+  const total = blocks.length;
+  const done = blocks.filter((b: any) => b?.done).length;
+  return { done, total };
+}
 ---
 
 <BaseLayout title="Diary">
@@ -17,20 +25,43 @@ const entries = (await getCollection('diary')).sort(
 
     <div class="diary-list">
       {
-        entries.map((entry) => (
-          <a href={`${base}diary/${entry.id}/`} class="card diary-card">
-            <time class="diary-date">{entry.data.date}</time>
-            <h2>{entry.data.title}</h2>
-            {entry.data.summary && <p class="diary-summary">{entry.data.summary}</p>}
-            {entry.data.tags && (
-              <div class="diary-tags">
-                {entry.data.tags.map((tag: string) => (
-                  <span class="tag">{tag}</span>
-                ))}
+        entries.map((entry) => {
+          const score = getScore(entry.data.routine);
+          return (
+            <a href={`${base}diary/${entry.id}/`} class="card diary-card">
+              <div class="diary-card-main">
+                <time class="diary-date">{entry.data.date}</time>
+                <h2>{entry.data.title}</h2>
+                {entry.data.summary && <p class="diary-summary">{entry.data.summary}</p>}
+                {entry.data.tags && (
+                  <div class="diary-tags">
+                    {entry.data.tags.map((tag: string) => (
+                      <span class="tag">{tag}</span>
+                    ))}
+                  </div>
+                )}
               </div>
-            )}
-          </a>
-        ))
+              {score && (
+                <div class="mini-score">
+                  <div class="mini-score-ring">
+                    <svg viewBox="0 0 36 36">
+                      <path
+                        class="ring-bg"
+                        d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                      />
+                      <path
+                        class="ring-fill"
+                        stroke-dasharray={`${(score.done / score.total) * 100}, 100`}
+                        d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                      />
+                    </svg>
+                    <span class="ring-text">{score.done}/{score.total}</span>
+                  </div>
+                </div>
+              )}
+            </a>
+          );
+        })
       }
     </div>
 
@@ -54,13 +85,19 @@ const entries = (await getCollection('diary')).sort(
   }
 
   .diary-card {
-    display: block;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
     color: var(--color-text);
     text-decoration: none;
   }
 
   .diary-card:hover {
     color: var(--color-text);
+  }
+
+  .diary-card-main {
+    flex: 1;
   }
 
   .diary-date {
@@ -96,6 +133,46 @@ const entries = (await getCollection('diary')).sort(
     padding: 0.2rem 0.6rem;
     border-radius: 20px;
     font-weight: 500;
+  }
+
+  /* Mini score ring */
+  .mini-score {
+    flex-shrink: 0;
+  }
+
+  .mini-score-ring {
+    position: relative;
+    width: 52px;
+    height: 52px;
+  }
+
+  .mini-score-ring svg {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+  }
+
+  .ring-bg {
+    fill: none;
+    stroke: var(--color-bg-alt);
+    stroke-width: 3;
+  }
+
+  .ring-fill {
+    fill: none;
+    stroke: var(--color-primary);
+    stroke-width: 3;
+    stroke-linecap: round;
+  }
+
+  .ring-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--color-primary);
   }
 
   .empty-state {

@@ -1,6 +1,11 @@
 import { defineCollection, z } from 'astro:content';
 import { glob } from 'astro/loaders';
 
+const routineBlock = z.object({
+  done: z.boolean(),
+  note: z.string().optional(),
+});
+
 const diary = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/diary' }),
   schema: z.object({
@@ -8,6 +13,15 @@ const diary = defineCollection({
     date: z.string(),
     summary: z.string().optional(),
     tags: z.array(z.string()).optional(),
+    routine: z
+      .object({
+        morning: routineBlock.optional(),
+        exercise: routineBlock.optional(),
+        afternoon: routineBlock.optional(),
+        evening: routineBlock.optional(),
+        sleep: routineBlock.optional(),
+      })
+      .optional(),
   }),
 });
 

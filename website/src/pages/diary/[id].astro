@@ -13,6 +13,20 @@ export async function getStaticPaths() {
 const base = import.meta.env.BASE_URL;
 const { entry } = Astro.props;
 const { Content } = await render(entry);
+
+const routine = entry.data.routine;
+const blocks = routine
+  ? [
+      { key: 'morning', label: 'Morning', icon: '🌅', data: routine.morning },
+      { key: 'exercise', label: 'Exercise', icon: '💪', data: routine.exercise },
+      { key: 'afternoon', label: 'Afternoon', icon: '☀️', data: routine.afternoon },
+      { key: 'evening', label: 'Evening', icon: '🌙', data: routine.evening },
+      { key: 'sleep', label: 'Sleep', icon: '😴', data: routine.sleep },
+    ]
+  : null;
+
+const completed = blocks ? blocks.filter((b) => b.data?.done).length : 0;
+const total = blocks ? blocks.length : 0;
 ---
 
 <BaseLayout title={entry.data.title}>
@@ -32,6 +46,33 @@ const { Content } = await render(entry);
           )
         }
       </header>
+
+      {
+        blocks && (
+          <div class="scorecard">
+            <div class="scorecard-header">
+              <span class="scorecard-title">Routine Scorecard</span>
+              <span class="scorecard-score">
+                {completed}/{total}
+              </span>
+            </div>
+            <div class="scorecard-bar">
+              <div class="scorecard-fill" style={`width: ${(completed / total) * 100}%`} />
+            </div>
+            <div class="scorecard-blocks">
+              {blocks.map((block) => (
+                <div class={`scorecard-block ${block.data?.done ? 'done' : 'missed'}`}>
+                  <span class="block-icon">{block.icon}</span>
+                  <span class="block-label">{block.label}</span>
+                  <span class="block-status">{block.data?.done ? '✓' : '✗'}</span>
+                  {block.data?.note && <span class="block-note">{block.data.note}</span>}
+                </div>
+              ))}
+            </div>
+          </div>
+        )
+      }
+
       <div class="prose">
         <Content />
       </div>
@@ -89,5 +130,120 @@ const { Content } = await render(entry);
     padding: 0.2rem 0.6rem;
     border-radius: 20px;
     font-weight: 500;
+  }
+
+  /* Scorecard */
+  .scorecard {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: 1.25rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow);
+  }
+
+  .scorecard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+  }
+
+  .scorecard-title {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--color-text);
+  }
+
+  .scorecard-score {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--color-primary);
+  }
+
+  .scorecard-bar {
+    height: 6px;
+    background: var(--color-bg-alt);
+    border-radius: 3px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+  }
+
+  .scorecard-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+    border-radius: 3px;
+    transition: width 0.3s;
+  }
+
+  .scorecard-blocks {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.5rem;
+  }
+
+  .scorecard-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+    padding: 0.5rem 0.25rem;
+    border-radius: 8px;
+    text-align: center;
+  }
+
+  .scorecard-block.done {
+    background: rgba(76, 175, 80, 0.08);
+  }
+
+  .scorecard-block.missed {
+    background: rgba(244, 67, 54, 0.06);
+  }
+
+  .block-icon {
+    font-size: 1.25rem;
+  }
+
+  .block-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--color-text-muted);
+  }
+
+  .block-status {
+    font-size: 0.85rem;
+    font-weight: 700;
+  }
+
+  .done .block-status {
+    color: #4caf50;
+  }
+
+  .missed .block-status {
+    color: #e57373;
+  }
+
+  .block-note {
+    font-size: 0.7rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+    line-height: 1.3;
+  }
+
+  @media (max-width: 768px) {
+    .scorecard-blocks {
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0.35rem;
+    }
+
+    .block-label {
+      font-size: 0.6rem;
+    }
+
+    .block-icon {
+      font-size: 1rem;
+    }
   }
 </style>
