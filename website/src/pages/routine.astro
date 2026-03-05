@@ -19,6 +19,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <li><label><input type="checkbox" /> 5 min stretching / mobility</label></li>
           <li><label><input type="checkbox" /> Breakfast</label></li>
         </ul>
+        <details class="why-section">
+          <summary>Why I do this</summary>
+          <div class="why-content">
+            <p>Add your reasoning here. For example: why you wake up at a specific time, why stretching in bed first thing matters, why hydration comes before food, etc.</p>
+          </div>
+        </details>
       </section>
 
       <section class="time-block card">
@@ -30,6 +36,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <li><label><input type="checkbox" /> Cool down & stretch (10 min)</label></li>
           <li><label><input type="checkbox" /> Post-workout nutrition</label></li>
         </ul>
+        <details class="why-section">
+          <summary>Why I do this</summary>
+          <div class="why-content">
+            <p>Add your reasoning here. For example: why mid-morning is the best time for you, why you chose this exercise structure, what you're building toward, etc.</p>
+          </div>
+        </details>
       </section>
 
       <section class="time-block card">
@@ -41,6 +53,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <li><label><input type="checkbox" /> Foam rolling or massage</label></li>
           <li><label><input type="checkbox" /> Hydration check</label></li>
         </ul>
+        <details class="why-section">
+          <summary>Why I do this</summary>
+          <div class="why-content">
+            <p>Add your reasoning here. For example: why a post-lunch walk helps with glucose, why foam rolling aids recovery, etc.</p>
+          </div>
+        </details>
       </section>
 
       <section class="time-block card">
@@ -52,6 +70,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <li><label><input type="checkbox" /> Journal / diary entry</label></li>
           <li><label><input type="checkbox" /> Prepare for tomorrow</label></li>
         </ul>
+        <details class="why-section">
+          <summary>Why I do this</summary>
+          <div class="why-content">
+            <p>Add your reasoning here. For example: why evening stretching activates the parasympathetic nervous system, why journaling keeps you accountable, etc.</p>
+          </div>
+        </details>
       </section>
 
       <section class="time-block card">
@@ -61,6 +85,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <li><label><input type="checkbox" /> No screens 30 min before bed</label></li>
           <li><label><input type="checkbox" /> Lights out by ___</label></li>
         </ul>
+        <details class="why-section">
+          <summary>Why I do this</summary>
+          <div class="why-content">
+            <p>Add your reasoning here. For example: why you target a specific number of hours, why screens before bed disrupt melatonin, why sleep is Step Zero for fixing a broken body, etc.</p>
+          </div>
+        </details>
       </section>
 
       <div class="reset-bar">
@@ -175,6 +205,60 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   .checklist label:has(input:checked) {
     color: var(--color-text-muted);
     text-decoration: line-through;
+  }
+
+  .why-section {
+    margin-top: 1rem;
+    border-top: 1px solid var(--color-border);
+    padding-top: 0.75rem;
+  }
+
+  .why-section summary {
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    padding: 0.25rem 0;
+    user-select: none;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .why-section summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .why-section summary::before {
+    content: '▸';
+    display: inline-block;
+    transition: transform 0.2s;
+    font-size: 0.8rem;
+  }
+
+  .why-section[open] summary::before {
+    transform: rotate(90deg);
+  }
+
+  .why-section summary:hover {
+    color: var(--color-primary-dark);
+  }
+
+  .why-content {
+    padding: 0.75rem 0 0.25rem 1.25rem;
+    font-size: 0.925rem;
+    color: var(--color-text-muted);
+    line-height: 1.65;
+    font-family: var(--font-serif);
+  }
+
+  .why-content p {
+    margin: 0 0 0.5rem;
+  }
+
+  .why-content p:last-child {
+    margin-bottom: 0;
   }
 
   .reset-bar {
