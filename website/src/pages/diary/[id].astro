@@ -77,8 +77,25 @@ const total = blocks ? blocks.length : 0;
       <div class="prose">
         <Content />
       </div>
+
+      {
+        entry.data.instagram && entry.data.instagram.length > 0 && (
+          <div class="diary-instagram">
+            {entry.data.instagram.map((url: string) => (
+              <blockquote
+                class="instagram-media"
+                data-instgrm-permalink={url}
+                data-instgrm-version="14"
+              />
+            ))}
+          </div>
+        )
+      }
     </article>
   </div>
+  {entry.data.instagram && entry.data.instagram.length > 0 && (
+    <script async src="//www.instagram.com/embed.js"></script>
+  )}
 </BaseLayout>
 
 <style>
@@ -231,6 +248,14 @@ const total = blocks ? blocks.length : 0;
     color: var(--color-text-muted);
     font-style: italic;
     line-height: 1.3;
+  }
+
+  .diary-instagram {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
   }
 
   @media (max-width: 768px) {
