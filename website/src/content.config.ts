@@ -14,6 +14,7 @@ const diary = defineCollection({
     summary: z.string().optional(),
     tags: z.array(z.string()).optional(),
     instagram: z.array(z.string()).optional(),
+    thumbnail: z.string().optional(),
     routine: z
       .object({
         morning: routineBlock.optional(),
