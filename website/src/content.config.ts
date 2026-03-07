@@ -21,7 +21,6 @@ const diary = defineCollection({
         exercise: routineBlock.optional(),
         meal1: routineBlock.optional(),
         meal2: routineBlock.optional(),
-        meal3: routineBlock.optional(),
         sleep: routineBlock.optional(),
       })
       .optional(),

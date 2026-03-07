@@ -20,8 +20,7 @@ const blocks = routine
       { key: 'morning', label: '6 AM', icon: '🌅', data: routine.morning },
       { key: 'exercise', label: '7 AM', icon: '💪', data: routine.exercise },
       { key: 'meal1', label: '10 AM', icon: '🍳', data: routine.meal1 },
-      { key: 'meal2', label: '1 PM', icon: '🥗', data: routine.meal2 },
-      { key: 'meal3', label: '5:30', icon: '🍽️', data: routine.meal3 },
+      { key: 'meal2', label: '5:30', icon: '🍽️', data: routine.meal2 },
       { key: 'sleep', label: '10 PM', icon: '😴', data: routine.sleep },
     ]
   : null;
@@ -196,7 +195,7 @@ const total = blocks ? blocks.length : 0;
 
   .scorecard-blocks {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 0.5rem;
   }
 
@@ -260,7 +259,7 @@ const total = blocks ? blocks.length : 0;
 
   @media (max-width: 768px) {
     .scorecard-blocks {
-      grid-template-columns: repeat(6, 1fr);
+      grid-template-columns: repeat(5, 1fr);
       gap: 0.35rem;
     }
 

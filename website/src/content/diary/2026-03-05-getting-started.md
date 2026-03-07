@@ -12,11 +12,8 @@ routine:
     note: "Not ready yet — starting tomorrow"
   meal1:
     done: true
-    note: "Formended bean paste soup with rice at 11 AM and a walk"
+    note: "Fermented bean paste soup with rice at 11 AM and a walk"
   meal2:
-    done: true
-    note: "No lunch"
-  meal3:
     done: true
     note: "Raw fish with rice and vegetables dinner at 7 PM and stretch"
   sleep:

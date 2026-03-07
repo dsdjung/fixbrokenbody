@@ -37,7 +37,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <div class="schedule-summary">
         <p><strong>Eating window:</strong> 10:00 AM &ndash; 6:00 PM (8 hours)</p>
         <p><strong>Fasting:</strong> 6:00 PM &ndash; 10:00 AM (16 hours)</p>
-        <p><strong>3 meals:</strong> 10 AM (break fast) &bull; 1 PM (lunch) &bull; 5:30 PM (last meal)</p>
+        <p><strong>2 meals:</strong> 10 AM (break fast) &bull; 5:30 PM (dinner)</p>
       </div>
     </div>
 
@@ -216,7 +216,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <details class="why-section">
           <summary>Why I do this</summary>
           <div class="why-content">
-            <p>This is the first meal after a 16-hour fast. The eating window runs from 10 AM to 6 PM (8 hours). The two plates together deliver ~35 g protein — right in the optimal range for maximizing muscle protein synthesis per meal. Inactive adults need 1.2–1.6 g/kg body weight per day to overcome anabolic resistance and rebuild muscle.</p>
+            <p>This is the first of two meals in the 8-hour eating window (10 AM to 6 PM). The two plates together deliver ~35 g protein — right in the optimal range for maximizing muscle protein synthesis per meal. With only 2 meals, each one needs to count. Inactive adults need 1.2–1.6 g/kg body weight per day to overcome anabolic resistance and rebuild muscle.</p>
             <p>Spinach as the salad base provides magnesium (commonly deficient — worsens insulin resistance and sleep) and iron. Walnuts in the yogurt bowl are the highest omega-3 nut, adding anti-inflammatory fat on top of the olive oil and avocado. Greek yogurt provides probiotics for gut health alongside its protein.</p>
             <p>After years of inactivity, the body develops "anabolic resistance" — it requires almost twice as much protein per meal to stimulate muscle building compared to active adults. This is why every meal in the eating window must be protein-rich.</p>
             <p>A 10-minute post-meal walk significantly lowers the 2-hour glucose area under the curve, mean blood glucose, and peak glucose. This is one of the single most effective interventions for glucose control — it costs nothing and works immediately.</p>
@@ -226,37 +226,44 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </section>
 
       <section class="time-block card">
-        <div class="time-badge">1:00 PM &mdash; Meal 2</div>
-        <h2>Lunch & Recovery</h2>
+        <div class="time-badge">5:30 PM &mdash; Meal 2</div>
+        <h2>Dinner & Wind Down</h2>
         <ul class="checklist">
           <li>
-            <label><input type="checkbox" /> Grilled salmon plate (~30 g protein)</label>
+            <label><input type="checkbox" /> Dinner (~30–35 g protein)</label>
             <details class="item-detail">
               <summary>What to eat</summary>
               <div class="item-detail-content">
+                <p><strong>Alternate between these two dinners:</strong></p>
+                <h4 style="margin: 0.75rem 0 0.25rem;">Option A: Grilled Salmon Plate (~30 g protein)</h4>
                 <table>
                   <thead><tr><th>Ingredient</th><th>Amount</th><th>Why</th></tr></thead>
                   <tbody>
                     <tr><td>Salmon fillet (grilled or baked)</td><td>150 g (~1 palm)</td><td>~30 g protein, EPA/DHA omega-3, vitamin D, astaxanthin</td></tr>
-                    <tr><td>Roasted sweet potato</td><td>1 medium</td><td>Complex carb, beta-carotene, lower glycemic than rice, potassium for BP</td></tr>
-                    <tr><td>Steamed broccoli</td><td>1 cup</td><td>Sulforaphane (anti-inflammatory, anti-cancer), vitamin C, fiber</td></tr>
-                    <tr><td>Extra-virgin olive oil</td><td>1 tbsp drizzle</td><td>Anti-inflammatory, helps absorb fat-soluble vitamins from vegetables</td></tr>
+                    <tr><td>Roasted sweet potato</td><td>1 medium</td><td>Complex carb, beta-carotene, potassium for BP</td></tr>
+                    <tr><td>Steamed broccoli</td><td>1 cup</td><td>Sulforaphane (anti-inflammatory), vitamin C, fiber</td></tr>
+                    <tr><td>Extra-virgin olive oil</td><td>1 tbsp drizzle</td><td>Anti-inflammatory, helps absorb fat-soluble vitamins</td></tr>
                     <tr><td>Turmeric + black pepper</td><td>Sprinkle on vegetables</td><td>Curcumin absorption increased ~2000% with piperine</td></tr>
                   </tbody>
                 </table>
-                <p class="detail-note">This is the biggest meal of the day — eat until satisfied. Salmon is the single best protein for fighting inflammation: it's the only common food with meaningful EPA/DHA omega-3 plus natural vitamin D.</p>
+                <h4 style="margin: 0.75rem 0 0.25rem;">Option B: Doenjang-jjigae (~25 g protein)</h4>
+                <table>
+                  <thead><tr><th>Ingredient</th><th>Amount</th><th>Why</th></tr></thead>
+                  <tbody>
+                    <tr><td>Doenjang (fermented soybean paste)</td><td>1.5 tbsp</td><td>Natural probiotic, isoflavones</td></tr>
+                    <tr><td>Firm tofu</td><td>150 g (1/2 block)</td><td>~15 g protein, complete amino acids, easy to digest</td></tr>
+                    <tr><td>Egg</td><td>1, cracked into soup</td><td>~6 g protein boost, choline</td></tr>
+                    <tr><td>Zucchini, onion, mushrooms</td><td>Generous</td><td>Fiber, potassium, B-vitamins</td></tr>
+                    <tr><td>Rice</td><td>Small bowl (1/2 cup cooked)</td><td>Complex carb, keeps portion moderate before the fast</td></tr>
+                    <tr><td>Kimchi (side)</td><td>Small bowl</td><td>Second fermented food — doubles probiotic benefit</td></tr>
+                  </tbody>
+                </table>
+                <p class="detail-note">Finish eating by 6:00 PM. This is the bigger meal of the day — with only 2 meals, aim for ~30–35 g protein here. The 16-hour fast begins after this meal. No snacking.</p>
               </div>
             </details>
           </li>
           <li>
-            <label><input type="checkbox" /> Post-lunch walk (15–20 min)</label>
-            <details class="item-detail">
-              <summary>What to do</summary>
-              <div class="item-detail-content">
-                <p>Post-lunch walk at a comfortable pace. Aim for 15–20 minutes. This is specifically for glucose management — 30 minutes of post-meal walking improves glycemic response regardless of what you ate.</p>
-                <p class="detail-note">Equipment: None. Outdoors preferred. Even pacing around the house counts.</p>
-              </div>
-            </details>
+            <label><input type="checkbox" /> Post-dinner walk (15–20 min)</label>
           </li>
           <li>
             <label><input type="checkbox" /> Foam rolling or massage</label>
@@ -275,47 +282,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                 <p class="detail-note">Equipment: Foam roller (or tennis ball for targeted spots). Skip areas that feel too painful — work up to them.</p>
               </div>
             </details>
-          </li>
-          <li><label><input type="checkbox" /> Hydration check</label></li>
-        </ul>
-        <details class="why-section">
-          <summary>Why I do this</summary>
-          <div class="why-content">
-            <p>Salmon is arguably the single best protein for a broken body. It provides EPA and DHA omega-3 directly (not a conversion like plant sources), which significantly reduces CRP, TNF-alpha, and IL-6 — three major inflammatory markers. It's also one of the few food sources of vitamin D, commonly deficient in people who spend most time indoors.</p>
-            <p>Sweet potato over white rice: lower glycemic index means a gentler glucose curve, plus beta-carotene and potassium (helps blood pressure). Broccoli provides sulforaphane, one of the most studied anti-cancer and anti-inflammatory compounds in food. The turmeric + black pepper combination increases curcumin absorption by ~2000%.</p>
-            <p>A post-lunch walk is one of the single best things for glucose control. Walking after meals reduces postprandial blood sugar spikes significantly. Even breaking up prolonged sitting with 3–5 minutes of light walking every 20–30 minutes improves glycemic control.</p>
-            <p>Each hour of daily sitting is associated with a 2% increase in all-cause mortality risk. People who sit more than 10 hours/day and are inactive have the highest mortality risk of any group studied. The afternoon walk directly counters this.</p>
-            <p>Foam rolling and self-massage support recovery by improving blood flow to tissues and reducing muscle tension. Staying well-hydrated throughout the day lowers cortisol reactivity to stress — meaning a well-hydrated body handles stress better than a dehydrated one.</p>
-          </div>
-        </details>
-      </section>
-
-      <section class="time-block card">
-        <div class="time-badge">5:30 PM &mdash; Meal 3</div>
-        <h2>Last Meal & Wind Down</h2>
-        <ul class="checklist">
-          <li>
-            <label><input type="checkbox" /> Doenjang-jjigae with tofu and egg (~25 g protein)</label>
-            <details class="item-detail">
-              <summary>What to eat</summary>
-              <div class="item-detail-content">
-                <table>
-                  <thead><tr><th>Ingredient</th><th>Amount</th><th>Why</th></tr></thead>
-                  <tbody>
-                    <tr><td>Doenjang (fermented soybean paste)</td><td>1.5 tbsp</td><td>Natural probiotic, isoflavones — better for gut health than most supplements</td></tr>
-                    <tr><td>Firm tofu</td><td>150 g (1/2 block)</td><td>~15 g protein, complete amino acids, easy to digest</td></tr>
-                    <tr><td>Egg</td><td>1, cracked into soup</td><td>~6 g protein boost, choline</td></tr>
-                    <tr><td>Zucchini, onion, mushrooms</td><td>Generous</td><td>Fiber, potassium, B-vitamins</td></tr>
-                    <tr><td>Rice</td><td>Small bowl (1/2 cup cooked)</td><td>Complex carb for sustained energy, keeps portion moderate before the fast</td></tr>
-                    <tr><td>Kimchi (side)</td><td>Small bowl</td><td>Second fermented food — doubles probiotic benefit, vitamin K</td></tr>
-                  </tbody>
-                </table>
-                <p class="detail-note">Finish eating by 6:00 PM. Warm soup is easy to digest — important with 4+ hours before sleep. The 16-hour fast begins after this meal. No snacking.</p>
-              </div>
-            </details>
-          </li>
-          <li>
-            <label><input type="checkbox" /> Post-dinner walk (10 min)</label>
           </li>
           <li>
             <label><input type="checkbox" /> Evening stretch / yoga (10–15 min)</label>
@@ -342,13 +308,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <details class="why-section">
           <summary>Why I do this</summary>
           <div class="why-content">
-            <p>Doenjang-jjigae is ideal as the last meal: the fermented soybean paste (doenjang) is a natural probiotic that supports gut microbiome diversity — more effective than most probiotic supplements because the bacteria survive the cooking temperature of soup better than you'd expect, and the fermentation byproducts (postbiotics) provide benefit regardless. Paired with kimchi on the side, this meal delivers two fermented foods in one sitting.</p>
-            <p>Warm soup is easier to digest than heavy solid meals, which matters when you need 4+ hours of digestion before sleep. The tofu + egg combination brings protein to ~25g without making the meal heavy.</p>
+            <p>Two meals instead of three: cramming 3 full meals into an 8-hour window causes digestive discomfort and doesn't leave enough time between meals for proper digestion. With 2 meals spaced 7.5 hours apart (10 AM and 5:30 PM), each meal has time to fully digest and the body gets ~65–70 g protein total — sufficient for muscle repair.</p>
+            <p>Alternating salmon and doenjang-jjigae gives variety while covering both key needs: salmon provides direct EPA/DHA omega-3 (the strongest anti-inflammatory food protein) plus natural vitamin D; doenjang-jjigae delivers fermented foods for gut microbiome diversity. Both options pair protein with vegetables and complex carbs.</p>
             <p>Eating the last meal by 6 PM creates a 16-hour fast until 10 AM the next morning. Research shows early eating windows (aligned with circadian rhythm) produce better insulin sensitivity, blood pressure, and glucose metabolism than late eating windows. Late-night eating impairs insulin sensitivity and fragments sleep.</p>
             <p>The post-dinner walk blunts the final glucose spike of the day, ensuring blood sugar is well-managed before the overnight fast begins.</p>
+            <p>Foam rolling and self-massage support recovery by improving blood flow to tissues and reducing muscle tension.</p>
             <p>Evening stretching activates the parasympathetic nervous system — the "rest and digest" mode. Studies show that stretching significantly decreases salivary cortisol and enhances parasympathetic nerve activity as measured by heart rate variability. This directly prepares the body for quality sleep.</p>
-            <p>Stretching in supine and inverted positions (like legs up the wall) stimulates baroreceptor activity, which reflexively lowers blood pressure, reduces stress hormones, and calms brain activity. This is as much for the nervous system as for flexibility.</p>
-            <p>12 weeks of regular stretching improves vascular function, reduces arterial stiffness, and induces positive arterial remodelling — benefits that persist even after stopping. The evening session compounds with the morning stretches for cumulative vascular and metabolic benefit.</p>
+            <p>Stretching in supine and inverted positions (like legs up the wall) stimulates baroreceptor activity, which reflexively lowers blood pressure, reduces stress hormones, and calms brain activity.</p>
             <p>Journaling and preparing for tomorrow creates accountability and reduces the mental load that can interfere with falling asleep.</p>
           </div>
         </details>
@@ -367,7 +333,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <p>Sleep is Step Zero. During deep sleep, the body releases human growth hormone for tissue repair, the brain's glymphatic system clears metabolic waste, and the immune system produces cytokines for infection defense and tissue healing. Without sleep, none of this happens.</p>
             <p>Sleep deprivation directly causes insulin resistance — even one night of poor sleep reduces insulin sensitivity by 19–25%. One week of sleeping ~5 hours/night significantly reduces insulin sensitivity in healthy people. The good news: three nights of catch-up sleep can reduce insulin resistance by ~20%.</p>
             <p>Screens before bed suppress melatonin production. A wind-down routine with dim lights signals the body to prepare for sleep. The American Heart Association now recognizes sleep as one of their "Life's Essential 8" for cardiovascular health.</p>
-            <p>The last meal was at 5:30–6:00 PM — over 4 hours ago. The body is done digesting, blood glucose has settled, and the overnight fast has begun. During sleep, HGH will surge for tissue repair, and the 16-hour fasting window will continue to promote autophagy (cellular cleanup) and fat oxidation until the eating window reopens at 10 AM.</p>
+            <p>Dinner was at 5:30–6:00 PM — over 4 hours ago. The body is done digesting, blood glucose has settled, and the overnight fast has begun. During sleep, HGH will surge for tissue repair, and the 16-hour fasting window will continue to promote autophagy (cellular cleanup) and fat oxidation until the eating window reopens at 10 AM.</p>
           </div>
         </details>
       </section>
