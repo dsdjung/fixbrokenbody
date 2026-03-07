@@ -38,6 +38,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <p><strong>Eating window:</strong> 10:00 AM &ndash; 6:00 PM (8 hours)</p>
         <p><strong>Fasting:</strong> 6:00 PM &ndash; 10:00 AM (16 hours)</p>
         <p><strong>2 meals:</strong> 10 AM (break fast) &bull; 5:30 PM (dinner)</p>
+        <p class="schedule-note">16:8 means a 16-hour fast and an 8-hour <em>window</em> in which you eat &mdash; not 8 hours of eating. Two meals, 7.5 hours apart, with nothing in between.</p>
       </div>
     </div>
 
@@ -475,6 +476,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   .schedule-summary p {
     margin: 0.15rem 0;
+  }
+
+  .schedule-note {
+    font-size: 0.8rem;
+    font-style: italic;
+    margin-top: 0.5rem !important;
+    opacity: 0.8;
   }
 
   .routine {
