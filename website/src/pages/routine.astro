@@ -321,10 +321,37 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </section>
 
       <section class="time-block card">
-        <div class="time-badge">9:30 PM &mdash; Sleep</div>
-        <h2>Lights Out by 10 PM</h2>
+        <div class="time-badge">9:00 PM &mdash; Wind Down</div>
+        <h2>Sleep Preparation</h2>
         <ul class="checklist">
+          <li><label><input type="checkbox" /> Dim lights (switch to lamp, no overhead lights)</label></li>
           <li><label><input type="checkbox" /> No screens 30 min before bed</label></li>
+          <li>
+            <label><input type="checkbox" /> Warm shower</label>
+            <details class="item-detail">
+              <summary>What to do</summary>
+              <div class="item-detail-content">
+                <p>Take a warm (not hot) shower about 1 hour before bed. This warms the skin, dilating blood vessels, which accelerates core body temperature drop afterward — the signal your body needs to initiate sleep.</p>
+                <p class="detail-note">A warm bath works even better but a shower is more practical. Studies show this reduces time to fall asleep by ~10 minutes.</p>
+              </div>
+            </details>
+          </li>
+          <li>
+            <label><input type="checkbox" /> Deep breathing (5 min)</label>
+            <details class="item-detail">
+              <summary>What to do</summary>
+              <div class="item-detail-content">
+                <p><strong>4-7-8 breathing:</strong> Inhale through nose for 4 seconds, hold for 7 seconds, exhale slowly through mouth for 8 seconds. Repeat 5–8 cycles.</p>
+                <p class="detail-note">This directly activates the vagus nerve, lowering heart rate and cortisol. Do this in bed with lights off as the last thing before sleep.</p>
+              </div>
+            </details>
+          </li>
+          <li>
+            <label><input type="checkbox" /> Cool bedroom (18–20°C / 65–68°F)</label>
+          </li>
+          <li>
+            <label><input type="checkbox" /> Magnesium glycinate (if supplementing)</label>
+          </li>
           <li><label><input type="checkbox" /> Lights out by 10 PM (8 hours before wake)</label></li>
         </ul>
         <details class="why-section">
@@ -332,7 +359,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <div class="why-content">
             <p>Sleep is Step Zero. During deep sleep, the body releases human growth hormone for tissue repair, the brain's glymphatic system clears metabolic waste, and the immune system produces cytokines for infection defense and tissue healing. Without sleep, none of this happens.</p>
             <p>Sleep deprivation directly causes insulin resistance — even one night of poor sleep reduces insulin sensitivity by 19–25%. One week of sleeping ~5 hours/night significantly reduces insulin sensitivity in healthy people. The good news: three nights of catch-up sleep can reduce insulin resistance by ~20%.</p>
-            <p>Screens before bed suppress melatonin production. A wind-down routine with dim lights signals the body to prepare for sleep. The American Heart Association now recognizes sleep as one of their "Life's Essential 8" for cardiovascular health.</p>
+            <p>Core body temperature must drop ~1°C to initiate sleep. A cool room (18–20°C) is one of the most reliable sleep interventions. The warm shower paradoxically helps — warming the skin dilates blood vessels, which dumps heat from the core faster, accelerating the temperature drop needed for sleep onset.</p>
+            <p>Screens and bright overhead lights suppress melatonin production. Dimming lights 1–2 hours before bed signals the pineal gland to start producing melatonin. Even a single lamp versus overhead lighting makes a measurable difference.</p>
+            <p>Slow, deep breathing (4-7-8 pattern) activates the vagus nerve, shifting the nervous system from sympathetic (fight-or-flight) to parasympathetic (rest-and-digest). This directly lowers heart rate, blood pressure, and cortisol — the three things that keep you awake.</p>
+            <p>Magnesium glycinate taken before bed improves sleep quality by activating GABA receptors (the brain's main inhibitory neurotransmitter). The glycinate form is best absorbed and least likely to cause digestive issues.</p>
             <p>Dinner was at 5:30–6:00 PM — over 4 hours ago. The body is done digesting, blood glucose has settled, and the overnight fast has begun. During sleep, HGH will surge for tissue repair, and the 16-hour fasting window will continue to promote autophagy (cellular cleanup) and fat oxidation until the eating window reopens at 10 AM.</p>
           </div>
         </details>
