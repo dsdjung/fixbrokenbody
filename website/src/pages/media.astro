@@ -1,5 +1,18 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const entries = (await getCollection('diary')).sort(
+  (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
+);
+
+const allInstagramPosts = entries.flatMap((entry) =>
+  (entry.data.instagram || []).map((url: string) => ({
+    url,
+    date: entry.data.date,
+    title: entry.data.title,
+  }))
+);
 ---
 
 <BaseLayout title="Media">
@@ -53,12 +66,16 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </a>
 
       <div class="ig-embeds">
-        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DVj0Kt-D3dB/" data-instgrm-version="14">
-        </blockquote>
-        <!--
-          To embed another Instagram post, copy the blockquote above
-          and replace the URL with the new post URL.
-        -->
+        {allInstagramPosts.map((post) => (
+          <blockquote
+            class="instagram-media"
+            data-instgrm-permalink={post.url}
+            data-instgrm-version="14"
+          />
+        ))}
+        {allInstagramPosts.length === 0 && (
+          <p class="empty-hint">Instagram posts added to diary entries will appear here automatically.</p>
+        )}
       </div>
     </section>
 
