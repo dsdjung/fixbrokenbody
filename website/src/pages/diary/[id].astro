@@ -27,6 +27,7 @@ const blocks = routine
 
 const completed = blocks ? blocks.filter((b) => b.data?.done).length : 0;
 const total = blocks ? blocks.length : 0;
+const sleepLog = entry.data.sleep_log;
 ---
 
 <BaseLayout title={entry.data.title}>
@@ -72,6 +73,20 @@ const total = blocks ? blocks.length : 0;
           </div>
         )
       }
+
+      {sleepLog && (sleepLog.bedtime || sleepLog.waketime || sleepLog.hours) && (
+        <div class="sleep-log">
+          <span class="sleep-log-icon">🛏️</span>
+          <div class="sleep-log-details">
+            {sleepLog.bedtime && sleepLog.waketime && (
+              <span class="sleep-times">{sleepLog.bedtime} → {sleepLog.waketime}</span>
+            )}
+            {sleepLog.hours && (
+              <span class="sleep-hours">{sleepLog.hours}h sleep</span>
+            )}
+          </div>
+        </div>
+      )}
 
       <div class="prose">
         <Content />
@@ -247,6 +262,44 @@ const total = blocks ? blocks.length : 0;
     color: var(--color-text-muted);
     font-style: italic;
     line-height: 1.3;
+  }
+
+  /* Sleep Log */
+  .sleep-log {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: 0.75rem 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .sleep-log-icon {
+    font-size: 1.5rem;
+  }
+
+  .sleep-log-details {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .sleep-times {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--color-text);
+  }
+
+  .sleep-hours {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    background: rgba(76, 175, 80, 0.1);
+    padding: 0.15rem 0.5rem;
+    border-radius: 12px;
   }
 
   .diary-instagram {
