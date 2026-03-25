@@ -22,3 +22,5 @@ routine:
 ---
 
 Day twenty-one. Tuesday. Three weeks in. Slept well. Had kimbab for lunch, then walked to the coffee shop and supermarket — about 40 minutes of walking. It was good to have some coffee time with the love of my life.
+
+Been having apple and grapefruit every day. Trying to keep the fruit intake consistent.
